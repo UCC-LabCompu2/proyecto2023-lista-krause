@@ -1,12 +1,12 @@
 body {
-  background-color: #8d4925
+  background-color: #9ca9ff
 ;
-  color: #ffb48a
+  color: #0539f8
 ;
   font-family: system-ui;
 }
 h1, h2, h3 {
-  color:#320000
+  color: #000000
 
 ;
   font-weight: bold;
@@ -28,7 +28,7 @@ input[type=text], input[type=number], input[type=datetime-local] {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-  border: 1px solid #4a1410
+  border: 1px solid #000000
 
 ;
   font-size: 16px;
