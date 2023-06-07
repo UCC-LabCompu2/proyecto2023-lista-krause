@@ -7,6 +7,7 @@
     <meta content="Web de Alquiler de departamentos" name="Descripcion">
     <meta content="Alquiler, Departamentos" name="Palabras principales">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="stylebotonalquiler.css">
     <title>Proyecto2023-Lista-krause</title>
 </head>
 
@@ -50,83 +51,151 @@
 
             <label for="telefono0">Teléfono:</label>
             <input type="tel" id="telefono0" name="telefono" required>
-            <a id="boton0" href="Botonalquiler.html">
-            <button type="submit">Reservar</button>
+
+            <button type="button" id="reservar0" onclick="verificarFormulario('formulario0', 'Botonalquiler.html')">
+                Reservar
+            </button>
         </form>
     </div>
 
+    <script>
+        function verificarFormulario(formularioId, urlRedireccion) {
+            var formulario = document.getElementById(formularioId);
+            var campos = formulario.querySelectorAll('input[required]');
+            var formularioCompleto = true;
 
-<div>
-    <h1><strong> Departamento Cañada Completo en Nueva Cordoba </strong></h1>
-    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/298583250.jpg?k=6d927792bfbc7e97b965596eaf0afd19eaded324f8111b3584befe7d861538b1&o=&hp=1"
-         alt="Foto de departamento 800mts" width="800" height="500">
-    <h3><em> <u> Direccion: </u> Avenida Marcelo 68 T. de Alvear 10 A, 5000 Córdoba, Argentina – </em></h3>
-    <h4> El Departamento Cañada Completo se encuentra en Córdoba, a 800 metros de la Manzana Jesuítica, a menos de 1
-        km de la catedral de Córdoba y a 2,8 km de la Plaza de España. Se encuentra a menos de 1 km del centro
-        comercial Patio Olmos y ofrece WiFi gratuita en todas las instalaciones.
-        El apartamento tiene terraza, vistas a la ciudad, 1 dormitorio, sala de estar, TV de pantalla plana por
-        cable, cocina equipada y baño con bidet y ducha. Se proporcionan toallas y ropa de cama.
+            campos.forEach(function (campo) {
+                if (!campo.value) {
+                    formularioCompleto = false;
+                }
+            });
 
-        El centro cívico de Córdoba se encuentra a 2 km del apartamento, mientras que el centro comercial de Córdoba
-        está a 6,4 km. El aeropuerto más cercano es el aeropuerto internacional Ingeniero Aeronáutico Ambrosio L.V.
-        Taravella, ubicado a 11 km del Departamento Cañada Completo.</h4>>
-</div>
+            if (formularioCompleto) {
+                window.location.href = urlRedireccion;
+            } else {
+                alert('Por favor, complete todos los campos del formulario.');
+            }
+        }
+    </script>
 
-<div>
-    <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
-    <form id="formulario1">
-        <label for="nombre1">Nombre:</label>
-        <input type="text" id="nombre1" name="nombre" required>
+    <div>
+        <h1><strong> Departamento Cañada Completo en Nueva Cordoba </strong></h1>
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/298583250.jpg?k=6d927792bfbc7e97b965596eaf0afd19eaded324f8111b3584befe7d861538b1&o=&hp=1"
+             alt="Foto de departamento 800mts" width="800" height="500">
+        <h3><em> <u> Direccion: </u> Avenida Marcelo 68 T. de Alvear 10 A, 5000 Córdoba, Argentina – </em></h3>
+        <h4> El Departamento Cañada Completo se encuentra en Córdoba, a 800 metros de la Manzana Jesuítica, a menos de 1
+            km de la catedral de Córdoba y a 2,8 km de la Plaza de España. Se encuentra a menos de 1 km del centro
+            comercial Patio Olmos y ofrece WiFi gratuita en todas las instalaciones.
+            El apartamento tiene terraza, vistas a la ciudad, 1 dormitorio, sala de estar, TV de pantalla plana por
+            cable, cocina equipada y baño con bidet y ducha. Se proporcionan toallas y ropa de cama.
 
-        <label for="apellido1">Apellido:</label>
-        <input type="text" id="apellido1" name="apellido" required>
+            El centro cívico de Córdoba se encuentra a 2 km del apartamento, mientras que el centro comercial de Córdoba
+            está a 6,4 km. El aeropuerto más cercano es el aeropuerto internacional Ingeniero Aeronáutico Ambrosio L.V.
+            Taravella, ubicado a 11 km del Departamento Cañada Completo.</h4>>
+    </div>
 
-        <label for="email1">Email:</label>
-        <input type="email" id="email1" name="email" required>
+    <div>
+        <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
+        <form id="formulario1">
+            <label for="nombre1">Nombre:</label>
+            <input type="text" id="nombre1" name="nombre" required>
 
-        <label for="telefono1">Teléfono:</label>
-        <input type="tel" id="telefono1" name="telefono" required>
-        <a id="boton1" href="Botonalquiler.html">
-        <button type="submit">Reservar</button>
-    </form>
-</div>
+            <label for="apellido1">Apellido:</label>
+            <input type="text" id="apellido1" name="apellido" required>
 
-<div>
-    <h1><strong> Monoambiente plaza Colon </strong></h1>
-    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/211051254.jpg?k=8b307627a74d7826686eb5821b81eea06003f16e17a6f1979890d965eef44566&o=&hp=1"
-         alt="Foto de departamento Plaza Colon" width="600px" height="300">
-    <h3><em> <u> Direccion: </u> Nicolás Avellaneda Centro, 5000 Córdoba, Argentina – </em></h3>
-    <h4>
-        <strong> Descripcion del departamento </strong>
-    </h4>
-    <h5> Monoambiente Plaza Colón se encuentra en Córdoba, a 1,9 km del centro comercial Patio Olmos y a 1,8 km
-        de la catedral de Córdoba, y ofrece WiFi gratuita y aire acondicionado. El establecimiento tiene vistas
-        al río y está a 1,9 km de la Manzana Jesuítica y a 2,8 km del centro cívico de Córdoba.
-        El apartamento cuenta con 1 dormitorio, 1 baño, ropa de cama, toallas, TV de pantalla plana con canales
-        por cable, zona de comedor, cocina totalmente equipada y balcón con vistas a la ciudad.
+            <label for="email1">Email:</label>
+            <input type="email" id="email1" name="email" required>
 
-        El apartamento sirve un desayuno americano. </h5>
-</div>
+            <label for="telefono1">Teléfono:</label>
+            <input type="tel" id="telefono1" name="telefono" required>
 
-<div>
-    <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
-    <form id="formulario2">
-        <label for="nombre2">Nombre:</label>
-        <input type="text" id="nombre2" name="nombre" required>
+            <button type="button" id="reservar1" onclick="verificarFormulario('formulario0', 'Botonalquiler.html')">
+                Reservar
+            </button>
+        </form>
+    </div>
 
-        <label for="apellido2">Apellido:</label>
-        <input type="text" id="apellido2" name="apellido" required>
+    <script>
+        function verificarFormulario(formularioId, urlRedireccion) {
+            var formulario = document.getElementById(formularioId);
+            var campos = formulario.querySelectorAll('input[required]');
 
-        <label for="email2">Email:</label>
-        <input type="email" id="email2" name="email" required>
+            var formularioCompleto = true;
 
-        <label for="telefono2">Teléfono:</label>
-        <input type="tel" id="telefono2" name="telefono" required>
+            campos.forEach(function (campo) {
+                if (!campo.value) {
+                    formularioCompleto = false;
+                }
+            });
 
-        <a id="boton2" href="Botonalquiler.html">
-        <button type="submit">Reservar</button>
-    </form>
-</div>
+            if (formularioCompleto) {
+                window.location.href = urlRedireccion;
+            } else {
+                alert('Por favor, complete todos los campos del formulario.');
+            }
+        }
+    </script>
+
+
+    <div>
+        <h1><strong> Monoambiente plaza Colon </strong></h1>
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/211051254.jpg?k=8b307627a74d7826686eb5821b81eea06003f16e17a6f1979890d965eef44566&o=&hp=1"
+             alt="Foto de departamento Plaza Colon" width="600px" height="300">
+        <h3><em> <u> Direccion: </u> Nicolás Avellaneda Centro, 5000 Córdoba, Argentina – </em></h3>
+        <h4>
+            <strong> Descripcion del departamento </strong>
+        </h4>
+        <h5> Monoambiente Plaza Colón se encuentra en Córdoba, a 1,9 km del centro comercial Patio Olmos y a 1,8 km
+            de la catedral de Córdoba, y ofrece WiFi gratuita y aire acondicionado. El establecimiento tiene vistas
+            al río y está a 1,9 km de la Manzana Jesuítica y a 2,8 km del centro cívico de Córdoba.
+            El apartamento cuenta con 1 dormitorio, 1 baño, ropa de cama, toallas, TV de pantalla plana con canales
+            por cable, zona de comedor, cocina totalmente equipada y balcón con vistas a la ciudad.
+
+            El apartamento sirve un desayuno americano. </h5>
+    </div>
+
+    <div>
+        <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
+        <form id="formulario2">
+            <label for="nombre2">Nombre:</label>
+            <input type="text" id="nombre2" name="nombre" required>
+
+            <label for="apellido2">Apellido:</label>
+            <input type="text" id="apellido2" name="apellido" required>
+
+            <label for="email0">Email:</label>
+            <input type="email" id="email2" name="email" required>
+
+            <label for="telefono2">Teléfono:</label>
+            <input type="tel" id="telefono2" name="telefono" required>
+
+            <button type="button" id="reservar2" onclick="verificarFormulario('formulario0', 'Botonalquiler.html')">
+                Reservar
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function verificarFormulario(formularioId, urlRedireccion) {
+            var formulario = document.getElementById(formularioId);
+            var campos = formulario.querySelectorAll('input[required]');
+
+            var formularioCompleto = true;
+
+            campos.forEach(function (campo) {
+                if (!campo.value) {
+                    formularioCompleto = false;
+                }
+            });
+
+            if (formularioCompleto) {
+                window.location.href = urlRedireccion;
+            } else {
+                alert('Por favor, complete todos los campos del formulario.');
+            }
+        }
+    </script>
+
 </main>
 
 <footer>
@@ -135,7 +204,7 @@
 
 <nav>
     <a id="boton" href="botoncontacto.html">
-        <button> Contactanos con nostros! </button>
+        <button> Contactanos con nostros!</button>
     </a>
 </nav>
 </body>

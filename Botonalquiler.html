@@ -1,89 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
+
 <head>
-  <title>Botón de contacto para alquilar departamentos</title>
-  <style>
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta content="Lista, Joaquin ; Krause, Augusto" name="Autores">
+    <meta content="Web de Alquiler de departamentos" name="Descripcion">
+    <meta content="Alquiler, Departamentos" name="Palabras principales">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>"Proyecto2023-Lista-krause"</title>
+    <title>Botón de contacto para alquilar departamentos</title>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <link rel="stylesheet" href="stylebotonalquiler.css">
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
 <div>
-  <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
-  <form id="formulario">
-    <div>
-      <p>Nombre del Inquilino</p>
+    <h3><u><strong>Para reservar este Departamento por favor complete los siguientes datos:</strong></u></h3>
+    <form id="formulario">
+        <div>
+            <p>Nombre del Inquilino</p>
 
 
-      <input type="text" id="nombre-inquilino">
-    </div>
+            <input type="text" id="nombre-inquilino">
+        </div>
 
-    <div>
+        <div>
 
-      <p>
-        Sexo:
-        <label for="sexo-masculino">Masculino</label>
-        <input type="radio" name="sexo" value="masculino" id="sexo-masculino">
-        <label for="sexo-femenino">Femenino</label>
-        <input type="radio" name="sexo" value="femenino" id="sexo-femenino">
-        <label for="sexo-no-especificado">Prefiero no especificar</label>
-        <input type="radio" name="sexo" value="Prefiero no especificar" id="sexo-no-especificado">
-      </p>
+            <p>
+                Sexo:
+                <label for="sexo-masculino">Masculino</label>
+                <input type="radio" name="sexo" value="masculino" id="sexo-masculino">
+                <label for="sexo-femenino">Femenino</label>
+                <input type="radio" name="sexo" value="femenino" id="sexo-femenino">
+                <label for="sexo-no-especificado">Prefiero no especificar</label>
+                <input type="radio" name="sexo" value="Prefiero no especificar" id="sexo-no-especificado">
+            </p>
 
-      <p>
-        <label for="cantidad-mayores">Cantidad de Mayores de edad:</label>
-        <input type="number" name="cantidad-mayores" id="cantidad-mayores">
-      </p>
+            <p>
+                <label for="cantidad-mayores">Cantidad de Mayores de edad:</label>
+                <input type="number" name="cantidad-mayores" id="cantidad-mayores">
+            </p>
 
-      <p>
-        <label for="cantidad-menores">Cantidad de Menores de edad:</label>
-        <input type="number" name="cantidad-menores" id="cantidad-menores">
-      </p>
+            <p>
+                <label for="cantidad-menores">Cantidad de Menores de edad:</label>
+                <input type="number" name="cantidad-menores" id="cantidad-menores">
+            </p>
 
-      <p>
-        <label for="fecha-llegada">Fecha de llegada y hora:</label>
-        <input type="datetime-local" name="fecha-llegada" id="fecha-llegada">
-      </p>
+            <p>
+                <label for="fecha-llegada">Fecha de llegada y hora:</label>
+                <input type="datetime-local" name="fecha-llegada" id="fecha-llegada">
+            </p>
 
-      <p>
-        <label for="fecha-salida">Fecha de salida y hora:</label>
-        <input type="datetime-local" name="fecha-salida" id="fecha-salida">
-      </p>
+            <p>
+                <label for="fecha-salida">Fecha de salida y hora:</label>
+                <input type="datetime-local" name="fecha-salida" id="fecha-salida">
+            </p>
 
-    </div>
-  </form>
-  <button class="button" onclick="enviarFormulario()">Enviar</button>
+        </div>
+    </form>
+    <button class="button" onclick="enviarFormulario()">Enviar</button>
 </div>
 
 <script>
-  function enviarFormulario() {
-    var nombreInquilino = document.getElementById("nombre-inquilino").value;
-    var sexo = document.querySelector('input[name="sexo"]:checked').value;
-    var cantidadMayores = document.getElementById("cantidad-mayores").value;
-    var cantidadMenores = document.getElementById("cantidad-menores").value;
-    var fechaLlegada = document.getElementById("fecha-llegada").value;
-    var fechaSalida = document.getElementById("fecha-salida").value;
-
-    // Aquí puedes hacer lo que desees con los datos del formulario, como enviarlos a un servidor o procesarlos localmente.
-    console.log("Nombre del Inquilino:", nombreInquilino);
-    console.log("Sexo:", sexo);
-    console.log("Cantidad de Mayores de edad:", cantidadMayores);
-    console.log("Cantidad de Menores de edad:", cantidadMenores);
-    console.log("Fecha de llegada y hora:", fechaLlegada);
-    console.log("Fecha de salida y hora:", fechaSalida);
-
-    // Puedes agregar aquí la lógica adicional que necesites para procesar los datos del formulario.
-  }
+    function enviarFormulario() {
+        var nombreInquilino = document.getElementById("nombre-inquilino").value;
+        var sexo = document.querySelector('input[name="sexo"]:checked').value;
+        var cantidadMayores = document.getElementById("cantidad-mayores").value;
+        var cantidadMenores = document.getElementById("cantidad-menores").value;
+        var fechaLlegada = document.getElementById("fecha-llegada").value;
+        var fechaSalida = document.getElementById("fecha-salida").value;
+        console.log("Nombre del Inquilino:", nombreInquilino);
+        console.log("Sexo:", sexo);
+        console.log("Cantidad de Mayores de edad:", cantidadMayores);
+        console.log("Cantidad de Menores de edad:", cantidadMenores);
+        console.log("Fecha de llegada y hora:", fechaLlegada);
+        console.log("Fecha de salida y hora:", fechaSalida);
+    }
 </script>
+
+<p id="precio-total"></p>
+
+<script>
+    function enviarFormulario() {
+        var fechaLlegada = new Date(document.getElementById("fecha-llegada").value);
+        var fechaSalida = new Date(document.getElementById("fecha-salida").value);
+        var precioDiario = 15000;
+        var diffTiempo = fechaSalida - fechaLlegada;
+        var diffDias = diffTiempo / (1000 * 60 * 60 * 24);
+        var precioTotal = diffDias * precioDiario;
+        document.getElementById("precio-total").textContent = "El precio total es: $" + precioTotal.toFixed(2);
+    }
+</script>
+
 </body>
 </html>
